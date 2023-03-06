@@ -11,6 +11,8 @@ class ProductsTableViewController: UITableViewController {
     
     var products: [ProductInfo] = []
     
+    let borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -45,7 +47,7 @@ extension ProductsTableViewController {
         
         cell.layer.cornerRadius = 20
         cell.layer.borderWidth = CGFloat(2)
-        cell.layer.borderColor = CGColor.init(red: 0.5, green: 0.5, blue: 0.5,  alpha: 0.5)
+        cell.layer.borderColor = borderColor
         cell.productImageView.layer.cornerRadius = 20
         
         return cell
