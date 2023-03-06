@@ -46,6 +46,7 @@ extension ProductsTableViewController {
         cell.layer.cornerRadius = 20
         cell.layer.borderWidth = CGFloat(2)
         cell.layer.borderColor = CGColor.init(red: 0.5, green: 0.5, blue: 0.5,  alpha: 0.5)
+        cell.productImageView.layer.cornerRadius = 20
         
         return cell
     }
