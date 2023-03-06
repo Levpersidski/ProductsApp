@@ -15,11 +15,11 @@ class ProductViewCell:UITableViewCell {
     func configure (product: ProductInfo) {
         productInfoLabel.text =
 """
-        Category: \(product.category)
+Category: \(product.category)
 
-        Name: \(product.title)
+Name: \(product.title)
 
-        Price is \(product.price)$
+Price is \(product.price)$
         
 """
         NetworkManager.shared.fetchImage(from: product.thumbnail) { data in

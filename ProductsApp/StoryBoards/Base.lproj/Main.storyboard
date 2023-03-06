@@ -17,30 +17,36 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="KEg-Xm-vcc" customClass="ProductViewCell" customModule="ProductsApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="46.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEg-Xm-vcc" id="6dW-Y6-REr">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="46.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-xK-iEz">
-                                            <rect key="frame" x="16" y="0.0" width="120" height="43.666666666666664"/>
+                                            <rect key="frame" x="16" y="0.0" width="120" height="46.666666666666664"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="cyc-Pl-NSf"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBm-6t-Jxm">
-                                            <rect key="frame" x="187" y="11" width="28.666666666666657" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="aBm-6t-Jxm">
+                                            <rect key="frame" x="151" y="13.000000000000002" width="222" height="20.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="236" id="hz0-lX-xLJ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="aBm-6t-Jxm" firstAttribute="leading" secondItem="KGb-xK-iEz" secondAttribute="trailing" constant="51" id="OqU-qJ-5Tf"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aBm-6t-Jxm" secondAttribute="bottom" constant="2" id="L8E-7d-3by"/>
+                                        <constraint firstItem="aBm-6t-Jxm" firstAttribute="leading" secondItem="KGb-xK-iEz" secondAttribute="trailing" constant="15" id="OqU-qJ-5Tf"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="aBm-6t-Jxm" secondAttribute="trailing" constant="20" symbolic="YES" id="hFM-rJ-Mh0"/>
                                         <constraint firstItem="KGb-xK-iEz" firstAttribute="leading" secondItem="6dW-Y6-REr" secondAttribute="leading" constant="16" id="iT2-8B-gsS"/>
                                         <constraint firstItem="KGb-xK-iEz" firstAttribute="top" secondItem="6dW-Y6-REr" secondAttribute="top" id="igk-Dp-uFa"/>
                                         <constraint firstAttribute="bottom" secondItem="KGb-xK-iEz" secondAttribute="bottom" id="u7E-FX-0az"/>
+                                        <constraint firstItem="aBm-6t-Jxm" firstAttribute="top" secondItem="6dW-Y6-REr" secondAttribute="topMargin" constant="2" id="yJg-eh-a9u"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -58,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ee-d7-Bbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="37"/>
+            <point key="canvasLocation" x="939.69465648854953" y="36.619718309859159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E8O-yp-i8H">
