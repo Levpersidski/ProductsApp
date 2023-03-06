@@ -26,13 +26,14 @@ class NetworkManager {
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data  else {
                 return
-                
             }
+            
             do {
                 let type = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(type)
                 }
+            
             } catch {
                 print(error)
             }

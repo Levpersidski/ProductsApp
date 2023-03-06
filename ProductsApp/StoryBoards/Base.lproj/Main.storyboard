@@ -23,18 +23,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-xK-iEz">
-                                            <rect key="frame" x="-10" y="0.0" width="115" height="43.666666666666664"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-xK-iEz">
+                                            <rect key="frame" x="16" y="0.0" width="120" height="43.666666666666664"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="cyc-Pl-NSf"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBm-6t-Jxm">
-                                            <rect key="frame" x="142" y="11" width="29" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBm-6t-Jxm">
+                                            <rect key="frame" x="187" y="11" width="28.666666666666657" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="aBm-6t-Jxm" firstAttribute="leading" secondItem="KGb-xK-iEz" secondAttribute="trailing" constant="51" id="OqU-qJ-5Tf"/>
                                         <constraint firstItem="KGb-xK-iEz" firstAttribute="leading" secondItem="6dW-Y6-REr" secondAttribute="leading" constant="16" id="iT2-8B-gsS"/>
                                         <constraint firstItem="KGb-xK-iEz" firstAttribute="top" secondItem="6dW-Y6-REr" secondAttribute="top" id="igk-Dp-uFa"/>
                                         <constraint firstAttribute="bottom" secondItem="KGb-xK-iEz" secondAttribute="bottom" id="u7E-FX-0az"/>

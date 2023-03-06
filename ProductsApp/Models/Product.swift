@@ -9,7 +9,7 @@ import Foundation
 
 struct StoreApp:Decodable {
     
-    let product: [ProductInfo]
+    let products: [ProductInfo]
 }
 
 struct ProductInfo: Decodable {
