@@ -29,7 +29,7 @@ struct ProductInfo: Decodable {
     
     static func getProductInfo(from value: Any) -> [ProductInfo] {
         guard let value = value as? [String: Any] else {return[]}
-        guard let products = value["products"] as? [[String: String]] else {return[]}
+        guard let products = value["products"] as? [[String: Any]] else {return[]}
         var productsArray = [ProductInfo]()
         
         for product in products {
