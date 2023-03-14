@@ -9,9 +9,9 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
     
-    var products: [ProductInfo] = []
+    private var products: [ProductInfo] = []
     
-    let borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor
+    private let borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor
     
     override func viewDidLoad() {
         
@@ -22,13 +22,14 @@ class ProductsTableViewController: UITableViewController {
     }
     
     private func fetchProducts() {
-        NetworkManager.shared.fetch(dataType: StoreApp.self, url: List.url.rawValue) { storeApp in
-            self.products = storeApp.products
+        NetworkManager.shared.fetchProducts(url: List.url.rawValue) { product in
+            self.products = product
             self.tableView.reloadData()
+        }
         }
         
     }
-}
+
 // MARK: - Table view data source
 
 

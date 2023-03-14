@@ -20,18 +20,19 @@ enum List: String {
 class NetworkManager {
     static let shared = NetworkManager()
     
-    func fetch<T: Decodable>(dataType: T.Type, url: String, completion:@escaping(T) -> Void ) {
+    func fetchProducts(url: String, completion: @escaping([ProductInfo]) -> Void ) {
         guard let url = URL(string: url) else {return}
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data  else {
+            guard let data = data else {
                 return
             }
             
             do {
-                let type = try JSONDecoder().decode(T.self, from: data)
+                let type = try JSONSerialization.jsonObject(with: data)
                 DispatchQueue.main.async {
-                    completion(type)
+                    let products = ProductInfo.getProductInfo(from: type)
+                    completion(products)
                 }
             
             } catch {
